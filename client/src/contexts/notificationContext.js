@@ -32,4 +32,6 @@ const NotificationProvider = ({ children }) => {
   )
 }
 
+// KOMMENTTI: samat exporttehin ja hookkeihin liittyvät kommentit kuin CardSetsProviderista
+
 export { notificationContext, NotificationProvider }

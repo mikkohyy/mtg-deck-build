@@ -11,4 +11,6 @@ const OpenedCardSetProvider = ({ children }) => {
   )
 }
 
+// KOMMENTTI: samat exporttehin ja hookkeihin liittyvät kommentit kuin CardSetsProviderista
+
 export { OpenedCardSetProvider, OpenedCardSetContext }

@@ -6,6 +6,7 @@ import {
   validateManaCost
 } from  './validation_utils'
 
+// KOMMENTTI: "data":n sijaan voisi käyttää kuvaavampia termejä kuten "name", "price", "rarity"
 const validationFunctions = {
   name: (data) => validateString(data),
   price: (data) => validateNumber(data),

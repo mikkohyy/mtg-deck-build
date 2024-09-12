@@ -27,7 +27,9 @@ const MainContainer = () => {
   const { cardSetsDispatch } = useContext(CardSetsContext)
 
   useEffect(() => {
+    // KOMMENTTI: Voisiko CardSetsProvider hoitaa tämän itse?
     const getCardSets = async () => {
+      // KOMMENTTI: Komponentilla olisi hyvä olla loading tila kunnes tämä on hoidettu
       try {
         const foundCardSets = await getAllCardSets()
         cardSetsDispatch({
@@ -44,6 +46,7 @@ const MainContainer = () => {
   return(
     <Router>
       <FullScreenContainer>
+        {/* KOMMENTTI: Yleensä mennään truthyn kautta eli `{ notificationIsVisible ? <Notif... /> : null }` */}
         { notificationIsVisible === false
           ? null
           : <NotificationContainer />

@@ -1,3 +1,8 @@
+// KOMMENTTI: Aika monesta alla olevista validointifunktioista voisi tehdä yksinkertaisempia esim.:
+// export const validateString = (maybeString) => typeof maybeString === 'string'
+// export const validateInteger = (maybeInteger) => Number.isInteger(maybeInteger)
+// export const validateNumber = (maybeNumber) => Number.isFinite(maybeNumber)
+
 const validateString = (data) => {
   let isString = true
 
@@ -21,6 +26,7 @@ const validateInteger = (data) => {
 const validateNumber = (data) => {
   let isFloat = true
 
+  // KOMMENTTI: Number.isFinite(data) voi olla varmempi, koska esim. typeof Infinity === 'number'
   if (data === undefined || typeof data !== 'number') {
     isFloat = false
   }
